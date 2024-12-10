@@ -39,4 +39,4 @@ GPLv2
 
 ## Autor
 
-Melksedeque Silva
+[Melksedeque Silva](https://github.com/Melksedeque)
