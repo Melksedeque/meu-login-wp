@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Meu Login WordPress 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Seu Nome <seu_email@example.com>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Domain: meu-login-wordpress\n"
+"X-Poedit-Version: 3.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e;esc_html__;esc_html_e;"
+"_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;"
+"esc_attr_x:1,2c;esc_html_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: meu-login-wordpress.php:24
+msgid "Usuário"
+msgstr "Usuário"
+
+#: meu-login-wordpress.php:25
+msgid "Senha"
+msgstr "Senha"
+
+#: meu-login-wordpress.php:26
+msgid "Lembrar-me"
+msgstr "Lembrar de mim"
+
+#: meu-login-wordpress.php:27
+msgid "Entrar"
+msgstr "Entrar"
+
+#: meu-login-wordpress.php:31
+msgid "Esqueceu a senha?"
+msgstr "Esqueceu a sua senha?"
+
+#: meu-login-wordpress.php:32
+msgid "Registrar"
+msgstr "Registrar"
