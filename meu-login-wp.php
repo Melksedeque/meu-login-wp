@@ -16,7 +16,7 @@ function meu_login_wordpress_shortcode() {
         $user = wp_get_current_user();
         $nome = $user->display_name;
         $logout_url = wp_logout_url( get_permalink() );
-        return "<p>Olá, <strong>$nome</strong>. Você já está logado no sistema.</p><p><a class='btn btn-outline-danger' href='$logout_url'>Sair</a></p>";
+        return "<p>Olá, <span class='logged-user-name'>$nome</span>. Você já está logado no sistema.</p><p><a class='btn btn-outline-danger btn-leave' href='$logout_url'><i class='fa-solid fa-right-from-bracket'></i>Sair</a></p>";
     } else {
         $form = wp_login_form( array(
             'echo'           => false,
