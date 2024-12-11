@@ -1,6 +1,6 @@
 /* Estilos para o formulário de login */
 .meu-login-wordpress__form {
-    background-color: #F2F2F2;
+    background-color: transparent;
     border-radius: 5px;
     padding: 20px;
 }
@@ -29,11 +29,27 @@
 }
 
 /* Estilos para os links */
+.useful-form-links {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
 .lost-password-link,
 .register-link {
     margin-top: 10px;
 }
 
-.btn-leave i, .btn-leave svg {
+.logged-user-message {
+    text-align: center;
+}
+
+.logged-user-message .logged-user-name {
+    font-weight: bold;
+}
+.logged-user-message .btn-leave i,
+.logged-user-message .btn-leave svg {
     margin-right: 5px;
 }
