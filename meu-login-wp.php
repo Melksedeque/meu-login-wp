@@ -43,3 +43,8 @@ function meu_login_wordpress_enqueue_styles() {
     wp_enqueue_style( 'meu-login-wordpress-style', plugins_url( 'style.css', __FILE__ ) );
 }
 add_action( 'wp_enqueue_scripts', 'meu_login_wordpress_enqueue_styles' );
+
+function meu_login_wordpress_enqueue_scripts() {
+    wp_enqueue_script( 'meu-login-wordpress-script', plugins_url( 'script.js', __FILE__ ), array(), '1.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'meu_login_wordpress_enqueue_scripts' );
