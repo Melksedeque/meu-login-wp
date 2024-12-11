@@ -16,7 +16,7 @@ function meu_login_wordpress_shortcode() {
         $user = wp_get_current_user();
         $nome = $user->display_name;
         $logout_url = wp_logout_url( get_permalink() );
-        return "<p>Olá, <span class='logged-user-name'>$nome</span>. Você já está logado no sistema.</p><p><a class='btn btn-outline-danger btn-leave' href='$logout_url'><i class='fa-solid fa-right-from-bracket'></i>Sair</a></p>";
+        return "<p>Olá, <span class='logged-user-name'>$nome</span>. Você já está logado no sistema.</p><p><a class='btn btn-sm btn-outline-danger btn-leave' href='$logout_url'><i class='fa-solid fa-arrow-right-from-bracket'></i>Sair</a></p>";
     } else {
         $form = wp_login_form( array(
             'echo'           => false,
@@ -48,6 +48,7 @@ add_action( 'wp_enqueue_scripts', 'meu_login_wordpress_enqueue_styles' );
 function meu_login_wordpress_enqueue_scripts() {
     wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.4.min.js', array(), '3.6.4', true );
     wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array('jquery'), '5.3.3', true );
+    wp_enqueue_script( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js', array('jquery'), '6.7.1', true );
     wp_enqueue_script( 'meu-login-wordpress-script', plugins_url( 'script.js', __FILE__ ), array(), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'meu_login_wordpress_enqueue_scripts' );
