@@ -32,7 +32,14 @@ function meu_login_wordpress_shortcode() {
         $form .= '<p class="lost-password-link"><a href="' . wp_lostpassword_url() . '">' . __( 'Esqueceu a senha?', 'meu-login-wordpress' ) . '</a></p>';
         $form .= '<p class="register-link"><a href="' . wp_registration_url() . '">' . __( 'Registrar', 'meu-login-wordpress' ) . '</a></p>';
 
+        $form = '<div class="meu-login-wordpress__form">' . $form . '</div>';
+
         return $form;
     }
 }
 add_shortcode( 'meu_login_wp', 'meu_login_wordpress_shortcode' );
+
+function meu_login_wordpress_enqueue_styles() {
+    wp_enqueue_style( 'meu-login-wordpress-style', plugins_url( 'style.css', __FILE__ ) );
+}
+add_action( 'wp_enqueue_scripts', 'meu_login_wordpress_enqueue_styles' );
