@@ -28,10 +28,6 @@
     padding: 10px 15px;
 }
 
-.meu-login-wordpress__form input[type="submit"]:hover {
-    background-color: #1EBF06;
-}
-
 /* Estilos para os links */
 .lost-password-link,
 .register-link {
