@@ -16,7 +16,7 @@ function meu_login_wordpress_shortcode() {
         $user = wp_get_current_user();
         $nome = $user->display_name;
         $logout_url = wp_logout_url( get_permalink() );
-        return "<p>Olá, <span class='logged-user-name'>$nome</span>. Você já está logado no sistema.</p><p><a class='btn btn-sm btn-outline-danger btn-leave' href='$logout_url'><i class='fa-solid fa-arrow-right-from-bracket'></i>Sair</a></p>";
+        return "<div class='logged-user-message'><p>Olá, <span class='logged-user-name'>$nome</span>. Você já está logado no sistema.</p><a class='btn btn-sm btn-outline-danger btn-leave' href='$logout_url'><i class='fa-solid fa-arrow-right-from-bracket'></i>Sair</a></div>";
     } else {
         $form = wp_login_form( array(
             'echo'           => false,
@@ -28,8 +28,10 @@ function meu_login_wordpress_shortcode() {
             'remember'       => true,
         ) );
 
+        $form .= '<div class="useful-form-links">';
         $form .= '<p class="lost-password-link"><a href="' . wp_lostpassword_url() . '">' . __( 'Esqueceu a senha?', 'meu-login-wordpress' ) . '</a></p>';
         $form .= '<p class="register-link"><a href="' . wp_registration_url() . '">' . __( 'Registrar', 'meu-login-wordpress' ) . '</a></p>';
+        $form .= '</div>';
 
         $form = '<div class="meu-login-wordpress__form">' . $form . '</div>';
 
