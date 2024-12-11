@@ -8,7 +8,7 @@
  * Author URI:  https://github.com/Melksedeque
  * License:     GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: meu-login-wp
+ * Text Domain: meu-login-wordpress
  */
 
 function meu_login_wordpress_shortcode() {
@@ -36,14 +36,18 @@ function meu_login_wordpress_shortcode() {
         return $form;
     }
 }
-add_shortcode( 'meu_login_wp', 'meu_login_wordpress_shortcode' );
+add_shortcode( 'meu_login_wordpress', 'meu_login_wordpress_shortcode' );
 
 function meu_login_wordpress_enqueue_styles() {
+    wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' );
+    wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css' );
     wp_enqueue_style( 'meu-login-wordpress-style', plugins_url( 'style.css', __FILE__ ) );
 }
 add_action( 'wp_enqueue_scripts', 'meu_login_wordpress_enqueue_styles' );
 
 function meu_login_wordpress_enqueue_scripts() {
+    wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.4.min.js', array(), '3.6.4', true );
+    wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array('jquery'), '5.3.3', true );
     wp_enqueue_script( 'meu-login-wordpress-script', plugins_url( 'script.js', __FILE__ ), array(), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'meu_login_wordpress_enqueue_scripts' );
